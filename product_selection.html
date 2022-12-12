@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <!-- <div id="wrapper">
+        <div class="header"></div>
+        <div class="selection-quantity">
+            <div class="selection">
+                <label for="">selection</label>
+                <select name="" id="" value="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                </select>
+            </div>
+            <div class="quantity">
+                <label for="">quantity</label>
+                <input type="text">
+            </div>
+            <div class="name">
+                <label for="">name</label>
+                <input type="text">
+            </div>
+        </div>
+        
+        <div class="button"><button><a href="">add to list</a></button></div>
+    </div> -->
+    <div id="header"><h1>shopping list</h1></div>
+    <div id="wrapper">
+        <p>add new item</p>
+        <div class="form">
+            <div class="select-quality">
+                <div class="select">
+                    <label for="">select</label>
+                    <select name="" id="">
+                        <option value=""></option>
+                        <option value="fruits">fruits or vegitables</option>
+                        <option value="meat">meat or safefood</option>
+                        <option value="dairy">dairy</option>
+                        <option value="frozen">frozenfood</option>
+                        <option value="breads">breads or pasta</option>
+                        <option value="snacks">snacks</option>
+                        <option value="breverages">breverages</option>
+                        <option value="cleaning">cleaning</option>
+                        <option value="others">others</option>
+                    </select>
+                </div>
+                <div class="quality">
+                    <label for="">quality</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="name">
+                <label for="">name</label>
+                <input type="text">
+            </div>
+        </div>
+        <button><a href="">add to list</a></button>
+    </div>
+    <div id="wrapper2">
+        <div class="box">
+            <div class="top"><p>fruits or vegitable</p></div>
+            <div class="bottom"></div>
+        </div>
+        <div class="box">
+            <div class="top"><p>meat or safefood</p></div>
+            <div class="bottom"></div>
+        </div>
+        <div class="box">
+            <div class="top"><p>dairy</p></div>
+            <div class="bottom"></div>
+        </div>
+        <div class="box">
+            <div class="top"><p>frozen foods</p></div>
+            <div class="bottom"></div>
+        </div>
+        <div class="box">
+            <div class="top"><p>braead or pasta</p></div>
+            <div class="bottom"></div>
+        </div>
+        <div class="box">
+            <div class="top"><p>snacks</p></div>
+            <div class="bottom"></div>
+        </div>
+        <div class="box">
+            <div class="top"><p>breverages</p></div>
+            <div class="bottom"></div>
+        </div>
+        <div class="box">
+            <div class="top"><p>cleaning</p></div>
+            <div class="bottom"></div>
+        </div>
+        <div class="box">
+            <div class="top"><p>others</p></div>
+        </div>
+    </div>
+    <script>
+        let select = document.querySelector('select')
+       let ankor = document.querySelector('a')
+       ankor.onclick = (e) =>{
+        e.preventDefault()
+        // console.log('aditya')
+        console.log(select.value)
+       }
+    </script>
+</body>
+</html>
