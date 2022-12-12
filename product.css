@@ -54,16 +54,33 @@
 }
 .box{
     border: 1px solid;
-    height: 100px;
     width: 18%;
     margin: 5px 5px;
 }
+.box .bottom{
+    min-height: 150px;
+}
 .box p{
-    color: white;
+    /* color: white; */
     font-size: 20px;
     font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.15rem;
+    margin: 0.15rem;
 }
 .top{
-    height: 25%;
     background-color: red;
+    color: #fff;
+}
+.cross{
+    border: 2px solid #eea9a9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
 }

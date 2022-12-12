@@ -52,60 +52,81 @@
                 </div>
                 <div class="quality">
                     <label for="">quality</label>
-                    <input type="text">
+                    <input type="text" class="quantity">
                 </div>
             </div>
             <div class="name">
                 <label for="">name</label>
-                <input type="text">
+                <input type="text" class="name-input">
             </div>
         </div>
         <button><a href="">add to list</a></button>
     </div>
     <div id="wrapper2">
-        <div class="box">
+        <div class="box fruits">
             <div class="top"><p>fruits or vegitable</p></div>
             <div class="bottom"></div>
         </div>
-        <div class="box">
+        <div class="box meat">
             <div class="top"><p>meat or safefood</p></div>
             <div class="bottom"></div>
         </div>
-        <div class="box">
+        <div class="box dairy">
             <div class="top"><p>dairy</p></div>
             <div class="bottom"></div>
         </div>
-        <div class="box">
+        <div class="box frozen">
             <div class="top"><p>frozen foods</p></div>
             <div class="bottom"></div>
         </div>
-        <div class="box">
+        <div class="box breads">
             <div class="top"><p>braead or pasta</p></div>
             <div class="bottom"></div>
         </div>
-        <div class="box">
+        <div class="box snacks">
             <div class="top"><p>snacks</p></div>
             <div class="bottom"></div>
         </div>
-        <div class="box">
+        <div class="box breverages">
             <div class="top"><p>breverages</p></div>
             <div class="bottom"></div>
         </div>
-        <div class="box">
+        <div class="box cleaning">
             <div class="top"><p>cleaning</p></div>
             <div class="bottom"></div>
         </div>
-        <div class="box">
+        <div class="box others">
             <div class="top"><p>others</p></div>
         </div>
     </div>
     <script>
         let select = document.querySelector('select')
        let ankor = document.querySelector('a')
+       let quantity = document.querySelector('.quantity')
+       let name = document.querySelector('.name-input')
+       
        ankor.onclick = (e) =>{
         e.preventDefault()
         // console.log('aditya')
-        console.log(select.value)
+        // console.log(name.value)
+        console.log(select.value,quantity.value,name.value)
+       
+       let para = document.createElement('p')
+       let span1 = document.createElement('span')
+       let span2 = document.createElement('span')
+       let span3 = document.createElement('span')
+       span3.setAttribute('onclick','delete_para(this)')
+       span3.classList.add("cross")
+       span1.innerHTML = name.value
+       span2.innerHTML = quantity.value
+       span3.innerHTML = '&times;';
+       para.appendChild(span3)
+       para.appendChild(span1)
+       para.appendChild(span2)
+       document.querySelector('.box.'+select.value+' .bottom').appendChild(para)
+       }
+       function delete_para(element){
+        element.parentElement.remove()
        }
     </script>
 </body>
